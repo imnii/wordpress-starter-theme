@@ -1,0 +1,227 @@
+/* 
+  COLORS:
+  #0D1B48 - Header menu
+  #7B7B7B - paragraph
+
+  #1351F4 - link color, button primary
+  #0036AD - footer bg
+*/
+
+
+/**
+|--------------------------------------------------
+| APP
+|--------------------------------------------------
+*/
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+|--------------------------------------------------
+| APP HEADER
+|--------------------------------------------------
+*/
+.app-header {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.15);
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+body.admin-bar .app-header {
+  top: 32px;
+}
+@media screen and (max-width: 782px) {
+  body.admin-bar .app-header { top: 46px; }
+}
+@media screen and (max-width: 600px) {
+  body.admin-bar .app-header { top: 0; }
+}
+
+/* App Header - Menu Toggle */
+.app-header__menu-toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  width: 40px;
+  height: 50px;
+}
+.app-header__menu-toggle div {
+  height: 25px;
+  position: relative;
+  width: 100%;
+}
+.app-header__menu-toggle span {
+  background-color: #0D1B48;
+  border-radius: 5px;
+  display: block;
+  height: 5px;
+  position: absolute;
+  transition: all 0.3s;
+}
+.app-header__menu-toggle span:nth-child(1) {
+  top: 0;
+  right: 0;
+  width: 75%;
+}
+.app-header__menu-toggle span:nth-child(2) {
+  top: 10px;
+  right: 0;
+  width: 100%;
+}
+.app-header__menu-toggle span:nth-child(3) {
+  top: 20px;
+  right: 0;
+  width: 50%;
+}
+
+.app-header__menu-toggle.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+  width: 100%;
+}
+.app-header__menu-toggle.open span:nth-child(2) {
+  top: 10px;
+  transform: rotate(225deg);
+  width: 100%;
+}
+.app-header__menu-toggle.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(405deg);
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .app-header__menu-toggle {
+    display: none;
+  }
+}
+
+/**
+|--------------------------------------------------
+| APP MAIN
+|--------------------------------------------------
+*/
+.app-main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  padding: 60px 0;
+  position: relative;
+}
+body.page-template-default .app-main {
+  padding: 0;
+}
+
+/**
+|--------------------------------------------------
+| APP CONTENT
+|--------------------------------------------------
+*/
+.app-content {
+  position: relative;
+}
+
+/**
+|--------------------------------------------------
+| APP SIDEBAR
+|--------------------------------------------------
+*/
+.app-sidebar {
+  position: relative;
+}
+
+/**
+|--------------------------------------------------
+| APP FOOTER
+|--------------------------------------------------
+*/
+.app-footer {
+  position: relative;
+}
+
+/**
+|--------------------------------------------------
+| COMPONENT
+|--------------------------------------------------
+*/
+/* Component - Banner */
+.banner {
+  background-color: #fafafa;
+  padding: 45px 30px;
+  text-align: center;
+}
+
+/**
+|--------------------------------------------------
+| WORDPRESS
+|--------------------------------------------------
+*/
+/* WordPress - Search Form */
+.search-form {
+  position: relative;
+}
+.search-form label {
+  margin-bottom: 0;
+  width: 100%;
+}
+.search-form .search-field {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  padding: 5px 75px 5px 5px;
+  width: 100%;
+}
+.search-form .search-submit {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+}
+
+/* WordPress - Widget */
+.widget {
+  margin-bottom: 30px;
+}
+.widget:last-child {
+  margin-bottom: 0;
+}
+.widget-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+/**
+|--------------------------------------------------
+| PACE JS
+|--------------------------------------------------
+*/
+.pace {
+  pointer-events: none;
+  user-select: none;
+}
+.pace-inactive {
+  display: none;
+}
+.pace .pace-progress {
+  background: #1351F4;
+  height: 3px;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  z-index: 2000;
+  width: 100%;
+}
